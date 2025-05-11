@@ -13,7 +13,6 @@ function App() {
   const menuItems = [
     { id: 'top', label: 'TOP' },
     { id: 'sns', label: 'TSUTSUJI' },
-    { id: 'schedule', label: '沖縄旅行表' },
     { id: 'puzzle', label: '謎解き' },
     { id: 'secret', label: 'メッセージページ' },
   ];

@@ -14,13 +14,6 @@ export default function TopPage() {
       linkText: "TSUTSUJIを見る"
     },
     {
-      url: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=2000&q=80",
-      title: "沖縄旅行表",
-      description: "沖縄での旅行スケジュールを確認できます。予定表を見て、素敵な旅の計画を立てましょう。",
-      link: "/travel",
-      linkText: "旅行表を見る"
-    },
-    {
       url: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=2000&q=80",
       title: "謎解きページ",
       description: "2つの謎解き問題に挑戦してみましょう。全ての謎を解くと、秘密のページへのアクセス方法がわかります。",
