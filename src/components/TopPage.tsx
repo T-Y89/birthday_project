@@ -46,6 +46,7 @@ export default function TopPage() {
   }, []);
 
   return (
+// 画面全体の背景色を白、文字色を黒
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <div className="relative h-screen">
@@ -91,7 +92,7 @@ export default function TopPage() {
       {/* Gallery Section */}
       <div className="py-24 px-4 md:px-8">
         <h3 
-          className="text-3xl md:text-5xl font-light tracking-[0.2em] text-center mb-16 opacity-0 animate-fade-in-scroll"
+          className="text-red-500 text-3xl md:text-5xl font-light tracking-[0.2em] text-center mb-16"
           style={{ fontFamily: 'Cormorant Garamond' }}
         >
           GALLERY
@@ -101,7 +102,7 @@ export default function TopPage() {
           {images.map((item, index) => (
             <div
               key={index}
-              className="relative group opacity-0 animate-fade-in-scroll"
+              className="relative group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="aspect-[4/3] overflow-hidden">
@@ -130,22 +131,45 @@ export default function TopPage() {
         </div>
       </div>
 
-      {/* Message Section */}
-      <div className="py-24 px-4 text-center">
-        <div className="max-w-2xl mx-auto opacity-0 animate-fade-in-scroll">
-          <h3 
-            className="text-3xl md:text-4xl font-light tracking-[0.2em] mb-8"
-            style={{ fontFamily: 'Cormorant Garamond' }}
-          >
-            Thank you
-          </h3>
-          <p 
-            className="text-lg md:text-xl font-light leading-relaxed"
-            style={{ fontFamily: 'Noto Serif JP' }}
-          >
-            これからも、ずっと一緒に。<br />
-            素敵な思い出をありがとう。
-          </p>
+      {/* TSUTSUJI */}
+      <div className="py-24 px-4 md:px-8">
+        <h3 
+          className="text-red-500 text-3xl md:text-5xl font-light tracking-[0.2em] text-center mb-16"
+          style={{ fontFamily: 'Cormorant Garamond' }}
+        >
+          GALLERY
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {images.map((item, index) => (
+            <div
+              key={index}
+              className="relative group"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={item.url}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-center p-4">
+                <h4 
+                  className="text-xl font-light mb-2"
+                  style={{ fontFamily: 'Noto Serif JP' }}
+                >
+                  {item.title}
+                </h4>
+                <p 
+                  className="text-sm font-light"
+                  style={{ fontFamily: 'Noto Serif JP' }}
+                >
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

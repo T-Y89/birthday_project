@@ -12,10 +12,10 @@ function App() {
 
   const menuItems = [
     { id: 'top', label: 'TOP' },
-    { id: 'puzzle', label: '謎解き' },
+    { id: 'sns', label: 'TSUTSUJI' },
     { id: 'schedule', label: '沖縄旅行表' },
-    { id: 'secret', label: 'シークレット' },
-    { id: 'sns', label: '2人だけのSNS' },
+    { id: 'puzzle', label: '謎解き' },
+    { id: 'secret', label: 'メッセージページ' },
   ];
 
   return (
